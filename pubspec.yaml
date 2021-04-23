@@ -32,6 +32,9 @@ dependencies:
   # Import the provider package.
   provider: '>=5.0.0-nullsafety.5 <6.0.0'
 
+  presentation:
+    path: ./presentation
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

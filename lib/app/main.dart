@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_clean_arch/presentation/viewmodel/HomeViewModel.dart';
-import 'package:flutter_clean_arch/presentation/widget/HomeWidget.dart';
+import 'package:presentation/presentation/viewmodel/HomeViewModel.dart';
+import 'package:presentation/presentation/widget/HomeWidget.dart';
 import 'package:provider/provider.dart';
 
 void main() {

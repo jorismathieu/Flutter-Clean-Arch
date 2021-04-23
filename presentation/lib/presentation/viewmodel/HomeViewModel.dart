@@ -1,6 +1,6 @@
 
 import 'package:flutter/widgets.dart';
-import '../../domain/usecase/HomeUseCase.dart';
+import 'package:domain/domain/usecase/HomeUseCase.dart';
 
 class HomeViewModel extends ChangeNotifier {
 
