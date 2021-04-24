@@ -1,6 +1,13 @@
-class HomeUseCase {
+import 'package:domain/domain/repository/HomeRepository.dart';
 
-  HomeRepository _repository = HomeRepository();
+abstract class HomeUseCase {
+  int getCount();
+  void incrementCount();
+}
+
+class HomeUseCaseImpl implements HomeUseCase {
+
+  HomeRepository _repository = HomeRepositoryImpl();
 
   int getCount() {
     return _repository.getCount();
