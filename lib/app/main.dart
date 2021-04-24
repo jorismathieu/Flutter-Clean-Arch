@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_clean_arch/app/AppModule.dart';
 import 'package:presentation/presentation/viewmodel/HomeViewModel.dart';
 import 'package:presentation/presentation/widget/HomeWidget.dart';
 import 'package:provider/provider.dart';
@@ -11,8 +12,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider<HomeViewModelImpl>(
-      create: (_) => HomeViewModelImpl(),
+    return ChangeNotifierProvider<HomeViewModelImpl>( // TODO : Cannot reference HomeViewModel (or nothing), widget won't find it
+      create: (_) => AppModule.getHomeViewModel(),
       child: MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(

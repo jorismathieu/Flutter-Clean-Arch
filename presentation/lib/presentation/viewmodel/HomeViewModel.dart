@@ -1,4 +1,3 @@
-
 import 'package:flutter/widgets.dart';
 import 'package:domain/domain/usecase/HomeUseCase.dart';
 
@@ -9,7 +8,11 @@ abstract class HomeViewModel {
 
 class HomeViewModelImpl extends ChangeNotifier implements HomeViewModel {
 
-  HomeUseCase _useCase = HomeUseCaseImpl();
+  HomeUseCase _useCase;
+
+  HomeViewModelImpl(HomeUseCase useCase) {
+    _useCase = useCase;
+  }
 
   int getCount() {
     return _useCase.getCount();

@@ -7,7 +7,11 @@ abstract class HomeUseCase {
 
 class HomeUseCaseImpl implements HomeUseCase {
 
-  HomeRepository _repository = HomeRepositoryImpl();
+  HomeRepository _repository;
+
+  HomeUseCaseImpl(HomeRepository repository) {
+    _repository = repository;
+  }
 
   int getCount() {
     return _repository.getCount();

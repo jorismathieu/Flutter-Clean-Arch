@@ -12,7 +12,7 @@ class HomeWidget extends StatefulWidget {
 class _HomeWidgetState extends State<HomeWidget> {
   @override
   Widget build(BuildContext context) {
-    var _viewModel = context.read<HomeViewModel>();
+    var _viewModel = context.read<HomeViewModelImpl>(); // TODO : Find a way to replace it with HomeViewModel
 
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
@@ -49,7 +49,7 @@ class _HomeWidgetState extends State<HomeWidget> {
             Text(
               'You have pushed the button this many times:',
             ),
-            Consumer<HomeViewModel>(
+            Consumer<HomeViewModelImpl>( // TODO : Find a way to replace it with HomeViewModel
               builder: (context, presenter, child) =>
                   Text(
                     '${_viewModel.getCount()}',
